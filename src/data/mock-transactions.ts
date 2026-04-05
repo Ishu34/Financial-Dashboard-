@@ -1,0 +1,80 @@
+import type { Transaction } from '@/types';
+
+export const mockTransactions: Transaction[] = [
+  // === January 2024 ===
+  { id: 'txn-001', date: '2024-01-05', amount: 5200, category: 'Salary', type: 'income', description: 'Monthly salary - January' },
+  { id: 'txn-002', date: '2024-01-07', amount: 45, category: 'Food', type: 'expense', description: 'Weekly groceries at Walmart' },
+  { id: 'txn-003', date: '2024-01-08', amount: 120, category: 'Bills', type: 'expense', description: 'Electric bill payment' },
+  { id: 'txn-004', date: '2024-01-10', amount: 15, category: 'Transport', type: 'expense', description: 'Uber ride to downtown' },
+  { id: 'txn-005', date: '2024-01-12', amount: 89, category: 'Shopping', type: 'expense', description: 'Winter jacket from Zara' },
+  { id: 'txn-006', date: '2024-01-15', amount: 750, category: 'Freelance', type: 'income', description: 'Website design project' },
+  { id: 'txn-007', date: '2024-01-18', amount: 32, category: 'Entertainment', type: 'expense', description: 'Movie tickets - Dune Part Two' },
+  { id: 'txn-008', date: '2024-01-20', amount: 150, category: 'Health', type: 'expense', description: 'Monthly gym membership' },
+  { id: 'txn-009', date: '2024-01-22', amount: 65, category: 'Food', type: 'expense', description: 'Dinner at Italian restaurant' },
+  { id: 'txn-010', date: '2024-01-25', amount: 200, category: 'Investment', type: 'income', description: 'Stock dividend payment' },
+
+  // === February 2024 ===
+  { id: 'txn-011', date: '2024-02-01', amount: 5200, category: 'Salary', type: 'income', description: 'Monthly salary - February' },
+  { id: 'txn-012', date: '2024-02-03', amount: 55, category: 'Food', type: 'expense', description: 'Grocery shopping at Trader Joe\'s' },
+  { id: 'txn-013', date: '2024-02-05', amount: 85, category: 'Bills', type: 'expense', description: 'Internet bill - Comcast' },
+  { id: 'txn-014', date: '2024-02-08', amount: 25, category: 'Transport', type: 'expense', description: 'Gas station fill-up' },
+  { id: 'txn-015', date: '2024-02-10', amount: 180, category: 'Shopping', type: 'expense', description: 'New running shoes - Nike' },
+  { id: 'txn-016', date: '2024-02-12', amount: 500, category: 'Gift', type: 'income', description: 'Birthday gift from parents' },
+  { id: 'txn-017', date: '2024-02-14', amount: 95, category: 'Food', type: 'expense', description: 'Valentine\'s Day dinner' },
+  { id: 'txn-018', date: '2024-02-16', amount: 299, category: 'Education', type: 'expense', description: 'Udemy course bundle - Web Development' },
+  { id: 'txn-019', date: '2024-02-18', amount: 42, category: 'Entertainment', type: 'expense', description: 'Netflix + Spotify monthly' },
+  { id: 'txn-020', date: '2024-02-22', amount: 35, category: 'Health', type: 'expense', description: 'Pharmacy - vitamins' },
+
+  // === March 2024 ===
+  { id: 'txn-021', date: '2024-03-01', amount: 5400, category: 'Salary', type: 'income', description: 'Monthly salary - March (with bonus)' },
+  { id: 'txn-022', date: '2024-03-03', amount: 72, category: 'Food', type: 'expense', description: 'Costco bulk shopping' },
+  { id: 'txn-023', date: '2024-03-05', amount: 145, category: 'Bills', type: 'expense', description: 'Water and sewage bill' },
+  { id: 'txn-024', date: '2024-03-07', amount: 1200, category: 'Freelance', type: 'income', description: 'Mobile app UI design project' },
+  { id: 'txn-025', date: '2024-03-09', amount: 48, category: 'Transport', type: 'expense', description: 'Uber ride to airport' },
+  { id: 'txn-026', date: '2024-03-12', amount: 250, category: 'Shopping', type: 'expense', description: 'Spring wardrobe refresh' },
+  { id: 'txn-027', date: '2024-03-15', amount: 28, category: 'Entertainment', type: 'expense', description: 'Concert ticket - local band' },
+  { id: 'txn-028', date: '2024-03-17', amount: 150, category: 'Health', type: 'expense', description: 'Annual dental checkup' },
+  { id: 'txn-029', date: '2024-03-20', amount: 38, category: 'Food', type: 'expense', description: 'Thai takeout dinner' },
+  { id: 'txn-030', date: '2024-03-25', amount: 75, category: 'Other', type: 'expense', description: 'Dry cleaning services' },
+
+  // === April 2024 ===
+  { id: 'txn-031', date: '2024-04-01', amount: 5200, category: 'Salary', type: 'income', description: 'Monthly salary - April' },
+  { id: 'txn-032', date: '2024-04-04', amount: 62, category: 'Food', type: 'expense', description: 'Weekly grocery run' },
+  { id: 'txn-033', date: '2024-04-06', amount: 180, category: 'Bills', type: 'expense', description: 'Car insurance quarterly payment' },
+  { id: 'txn-034', date: '2024-04-08', amount: 320, category: 'Investment', type: 'income', description: 'Quarterly dividend payment' },
+  { id: 'txn-035', date: '2024-04-10', amount: 22, category: 'Transport', type: 'expense', description: 'Public transit monthly pass' },
+  { id: 'txn-036', date: '2024-04-12', amount: 145, category: 'Shopping', type: 'expense', description: 'Kitchen appliances - blender' },
+  { id: 'txn-037', date: '2024-04-15', amount: 85, category: 'Education', type: 'expense', description: 'Programming books - Amazon' },
+  { id: 'txn-038', date: '2024-04-18', amount: 55, category: 'Entertainment', type: 'expense', description: 'Bowling night with friends' },
+  { id: 'txn-039', date: '2024-04-20', amount: 48, category: 'Food', type: 'expense', description: 'Brunch at local cafe' },
+  { id: 'txn-040', date: '2024-04-25', amount: 200, category: 'Health', type: 'expense', description: 'Eye exam and new glasses' },
+
+  // === May 2024 ===
+  { id: 'txn-041', date: '2024-05-01', amount: 5200, category: 'Salary', type: 'income', description: 'Monthly salary - May' },
+  { id: 'txn-042', date: '2024-05-03', amount: 78, category: 'Food', type: 'expense', description: 'Whole Foods organic groceries' },
+  { id: 'txn-043', date: '2024-05-05', amount: 95, category: 'Bills', type: 'expense', description: 'Phone bill - Verizon' },
+  { id: 'txn-044', date: '2024-05-07', amount: 850, category: 'Freelance', type: 'income', description: 'Logo design for startup' },
+  { id: 'txn-045', date: '2024-05-09', amount: 35, category: 'Transport', type: 'expense', description: 'Lyft ride to event' },
+  { id: 'txn-046', date: '2024-05-12', amount: 280, category: 'Shopping', type: 'expense', description: 'Summer clothes shopping' },
+  { id: 'txn-047', date: '2024-05-14', amount: 65, category: 'Entertainment', type: 'expense', description: 'Escape room experience' },
+  { id: 'txn-048', date: '2024-05-17', amount: 120, category: 'Health', type: 'expense', description: 'Sports massage therapy' },
+  { id: 'txn-049', date: '2024-05-20', amount: 52, category: 'Food', type: 'expense', description: 'Sushi dinner date' },
+  { id: 'txn-050', date: '2024-05-25', amount: 45, category: 'Other', type: 'expense', description: 'Pet supplies and food' },
+
+  // === June 2024 ===
+  { id: 'txn-051', date: '2024-06-01', amount: 5500, category: 'Salary', type: 'income', description: 'Monthly salary - June (raise effective)' },
+  { id: 'txn-052', date: '2024-06-03', amount: 85, category: 'Food', type: 'expense', description: 'BBQ supplies for cookout' },
+  { id: 'txn-053', date: '2024-06-05', amount: 160, category: 'Bills', type: 'expense', description: 'Air conditioning service' },
+  { id: 'txn-054', date: '2024-06-07', amount: 1500, category: 'Freelance', type: 'income', description: 'E-commerce website project' },
+  { id: 'txn-055', date: '2024-06-09', amount: 42, category: 'Transport', type: 'expense', description: 'Uber pool rides weekly' },
+  { id: 'txn-056', date: '2024-06-12', amount: 195, category: 'Shopping', type: 'expense', description: 'Sunglasses and beach gear' },
+  { id: 'txn-057', date: '2024-06-14', amount: 75, category: 'Entertainment', type: 'expense', description: 'Music festival day pass' },
+  { id: 'txn-058', date: '2024-06-16', amount: 150, category: 'Health', type: 'expense', description: 'Gym membership renewal' },
+  { id: 'txn-059', date: '2024-06-18', amount: 68, category: 'Food', type: 'expense', description: 'Father\'s Day dinner' },
+  { id: 'txn-060', date: '2024-06-20', amount: 450, category: 'Investment', type: 'income', description: 'Crypto gains realized' },
+  { id: 'txn-061', date: '2024-06-22', amount: 199, category: 'Education', type: 'expense', description: 'AWS certification course' },
+  { id: 'txn-062', date: '2024-06-24', amount: 8, category: 'Transport', type: 'expense', description: 'Parking meter downtown' },
+  { id: 'txn-063', date: '2024-06-26', amount: 125, category: 'Gift', type: 'income', description: 'Cash gift from relatives' },
+  { id: 'txn-064', date: '2024-06-28', amount: 32, category: 'Food', type: 'expense', description: 'Ice cream shop visit' },
+  { id: 'txn-065', date: '2024-06-30', amount: 58, category: 'Other', type: 'expense', description: 'Charity donation' },
+];
