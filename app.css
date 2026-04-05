@@ -1,0 +1,271 @@
+@import "tailwindcss";
+
+/* Dark mode variant - class-based */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Financial Glassmorphism Design System */
+@theme {
+  /* === Color Palette — Light Mode === */
+  --color-background: #F8FAFC;
+  --color-foreground: #0F172A;
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F1F5F9;
+  
+  --color-primary: #3B82F6;
+  --color-primary-hover: #2563EB;
+  --color-primary-subtle: #EFF6FF;
+  --color-primary-foreground: #FFFFFF;
+  
+  --color-accent: #F97316;
+  --color-accent-hover: #EA580C;
+  --color-accent-subtle: #FFF7ED;
+  --color-accent-foreground: #FFFFFF;
+  
+  --color-success: #10B981;
+  --color-success-hover: #059669;
+  --color-success-subtle: #ECFDF5;
+  --color-success-foreground: #FFFFFF;
+  
+  --color-danger: #EF4444;
+  --color-danger-hover: #DC2626;
+  --color-danger-subtle: #FEF2F2;
+  --color-danger-foreground: #FFFFFF;
+  
+  --color-warning: #F59E0B;
+  --color-warning-hover: #D97706;
+  --color-warning-subtle: #FFFBEB;
+  --color-warning-foreground: #FFFFFF;
+  
+  --color-border: #E2E8F0;
+  --color-border-hover: #CBD5E1;
+  --color-muted: #64748B;
+  --color-muted-foreground: #94A3B8;
+  
+  --color-card: #FFFFFF;
+  --color-card-foreground: #0F172A;
+  
+  --color-sidebar: #FFFFFF;
+  --color-sidebar-foreground: #334155;
+  --color-sidebar-active: #EFF6FF;
+  
+  /* Ring/Focus */
+  --color-ring: #3B82F6;
+  --color-ring-offset: #FFFFFF;
+  
+  /* === Typography === */
+  --font-sans: 'Fira Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Fira Code', ui-monospace, monospace;
+  
+  /* === Radius tokens === */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  
+  /* === Shadow tokens === */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.08);
+  --shadow-card-hover: 0 4px 12px 0 rgb(0 0 0 / 0.12);
+  --shadow-glow-primary: 0 0 15px rgba(59, 130, 246, 0.3), 0 0 30px rgba(59, 130, 246, 0.1);
+  --shadow-glow-accent: 0 0 15px rgba(249, 115, 22, 0.3), 0 0 30px rgba(249, 115, 22, 0.1);
+  --shadow-glow-success: 0 0 15px rgba(16, 185, 129, 0.3);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.08);
+  
+  /* === Animation tokens === */
+  --animate-fade-in: fade-in 0.2s ease-out;
+  --animate-slide-up: slide-up 0.3s ease-out;
+  --animate-slide-down: slide-down 0.3s ease-out;
+  --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-marquee: marquee var(--duration) linear infinite;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  --animate-shimmer-slide: shimmer-slide 8s ease-in-out infinite;
+  --animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
+  
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slide-up {
+    from { transform: translateY(0.5rem); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes slide-down {
+    from { transform: translateY(-0.5rem); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% - var(--gap))); }
+  }
+  
+  @keyframes marquee-vertical {
+    from { transform: translateY(0); }
+    to { transform: translateY(calc(-100% - var(--gap))); }
+  }
+  
+  @keyframes shimmer-slide {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+  }
+  
+  @keyframes spin-around {
+    0% { transform: translateZ(0) rotate(0); }
+    100% { transform: translateZ(0) rotate(360deg); }
+  }
+  
+  /* Shimmer skeleton animation */
+  --animate-shimmer: shimmer 2s infinite;
+}
+
+/* === Dark Mode Overrides (OLED-optimized) === */
+.dark {
+  --color-background: #030712;
+  --color-foreground: #F1F5F9;
+  --color-surface: #111827;
+  --color-surface-hover: #1F2937;
+  
+  --color-primary: #60A5FA;
+  --color-primary-hover: #3B82F6;
+  --color-primary-subtle: #1E3A5F;
+  
+  --color-accent: #FB923C;
+  --color-accent-hover: #F97316;
+  --color-accent-subtle: #7C2D12;
+  
+  --color-success: #34D399;
+  --color-success-hover: #10B981;
+  --color-success-subtle: #064E3B;
+  
+  --color-danger: #F87171;
+  --color-danger-hover: #EF4444;
+  --color-danger-subtle: #7F1D1D;
+  
+  --color-warning: #FBBF24;
+  --color-warning-hover: #F59E0B;
+  --color-warning-subtle: #78350F;
+  
+  --color-border: #1F2937;
+  --color-border-hover: #374151;
+  --color-muted: #94A3B8;
+  --color-muted-foreground: #64748B;
+  
+  --color-card: #111827;
+  --color-card-foreground: #F1F5F9;
+  
+  --color-sidebar: #0D1117;
+  --color-sidebar-foreground: #CBD5E1;
+  --color-sidebar-active: #1E3A5F;
+  
+  --color-ring: #60A5FA;
+  --color-ring-offset: #030712;
+  
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+  --shadow-card-hover: 0 4px 12px 0 rgb(0 0 0 / 0.4);
+  --shadow-glow-primary: 0 0 20px rgba(96, 165, 250, 0.4), 0 0 40px rgba(96, 165, 250, 0.15);
+  --shadow-glow-accent: 0 0 20px rgba(251, 146, 60, 0.4), 0 0 40px rgba(251, 146, 60, 0.15);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* === Base Styles === */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  /* Financial number formatting */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+  
+  /* Glassmorphism utility */
+  .glass {
+    @apply backdrop-blur-xl border border-white/10;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .glass-card {
+    @apply backdrop-blur-xl rounded-xl border border-white/10;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+  
+  :root .glass { background: rgba(255, 255, 255, 0.7); border-color: rgba(0, 0, 0, 0.08); }
+  :root .glass-card { background: rgba(255, 255, 255, 0.8); border-color: rgba(0, 0, 0, 0.06); }
+  .dark .glass { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1); }
+  .dark .glass-card { background: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.08); }
+  
+  /* Glow text effect */
+  .glow-text {
+    text-shadow: 0 0 10px currentColor;
+  }
+  
+  /* Focus ring improvement */
+  .focus-ring {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-ring-offset;
+  }
+  
+  /* Shimmer skeleton utility */
+  .skeleton-shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: var(--animate-shimmer);
+  }
+  
+  /* Dark mode shimmer adjustment */
+  .dark .skeleton-shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.08) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+  }
+  
+  /* Ensure all interactive elements have cursor-pointer */
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  a[href],
+  input[type="checkbox"],
+  input[type="radio"],
+  select,
+  [tabindex]:not([tabindex="-1"]) {
+    cursor: pointer;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
